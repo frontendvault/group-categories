@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+    <style>
+        .shop-color {
+            background: #bc351b
+        }
+
+        .group-categories .group-cat-heading {
+            font-size: 26px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .group-categories .list-group-item {
+            padding: 20px 0
+        }
+
+        .group-categories .nav .nav-link {
+            padding: 20px;
+            border: 2px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .group-categories .nav .nav-link.active {
+            border: 2px solid #bc351b;
+            background: transparent;
+        }
+
+        .group-categories .nav .nav-link h3 {
+
+            margin-bottom: 0;
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+
+        .group-categories .nav .nav-link.active h3 {
+            color: #bc351b;
+        }
+
+        .group-categories .cat-logo {
+            width: 25px;
+        }
+
+
+        .group-categories .nav .nav-link h5 {
+            color: #454545;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .group-categories .nav .nav-link small {
+            color: #454545;
+
+        }
+
+        .group-categories .tab-content h2 button {
+            color: #454545;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .group-categories .tab-content button:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .group-categories .tab-content .list-group a {
+            color: #454545;
+        }
+
+        .group-categories .category-item .item-actions .btn {
+            border: 1px solid #bc351b;
+            color: #bc351b;
+            margin-bottom: 10px;
+            font-weight: 550;
+        }
+
+        .group-categories .category-item .category-img img {
+            height: 80px;
+            width: 80px;
+
+        }
+
+        .group-categories .category-item .item-content-section h4 {
+            font-size: 18px;
+            font-weight: 550;
+        }
+
+        .group-categories .category-item .item-actions .btn:hover {
+            background: #bc351b;
+            color: #fff
+        }
+
+        .group-categories .category-item .item-actions .points {
+            font-weight: 550;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .group-categories .nav .nav-link {
+                padding: 18px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .group-categories .nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .group-categories .nav .nav-link h3 {
+                margin-top: 0;
+            }
+
+            .group-categories .nav .nav-link {
+                width: 100%
+            }
+
+            .group-categories .nav .nav-link {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col group-categories my-3">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item " role="presentation">
+                        <button class="nav-link shadow-sm active" id="pills-home-tab" data-toggle="pill"
+                            data-target="#pills-taco" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true">
+                            <div class="cat-logo mx-auto mb-md-1"> <img src="images/group-logo.png" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <h5 class="d-none d-sm-flex">brand Name</h5>
+                            <small class="d-none d-sm-flex">Tagline goes here </small>
+                            <h3>Taco Truck</h3>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link shadow-sm" id="pills-burger-tab" data-toggle="pill"
+                            data-target="#pills-burger" type="button" role="tab" aria-controls="pills-burger"
+                            aria-selected="false">
+                            <div class="cat-logo mx-auto mb-md-1"> <img src="images/group-logo.png" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <h5 class="d-none d-sm-flex">brand Name</h5>
+                            <small class="d-none d-sm-flex">Tagline goes here </small>
+                            <h3>Burger Born</h3>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link shadow-sm" id="pills-pizza-tab" data-toggle="pill"
+                            data-target="#pills-pizza" type="button" role="tab" aria-controls="pills-pizza"
+                            aria-selected="false">
+                            <div class="cat-logo mx-auto mb-md-1"> <img src="images/group-logo.png" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <h5 class="d-none d-sm-flex">brand Name</h5>
+                            <small class="d-none d-sm-flex">Tagline goes here </small>
+                            <h3>Pizza Place</h3>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link shadow-sm" id="pills-contact-tab" data-toggle="pill"
+                            data-target="#pills-curry" type="button" role="tab" aria-controls="pills-curry"
+                            aria-selected="false">
+                            <div class="cat-logo mx-auto mb-md-1"> <img src="images/group-logo.png" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <h5 class="d-none d-sm-flex">brand Name</h5>
+                            <small class="d-none d-sm-flex">Tagline goes here </small>
+                            <h3>Curry Cabin</h3>
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-4 mt-md-5" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-taco" role="tabpanel"
+                        aria-labelledby="pills-taco-tab">
+                        <h2 class="group-cat-heading">Taco Cake</h2>
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button"
+                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Category #1
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Category #2
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Category #3
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-burger" role="tabpanel" aria-labelledby="pills-burger-tab">
+                        <h2 class="group-cat-heading">Burger Born</h2>
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button"
+                                            data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
+                                            aria-controls="collapseFour">
+                                            Category #4
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                            aria-controls="collapseFive">
+                                            Category #5
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
+                                            aria-controls="collapseSix">
+                                            Category #6
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-pizza" role="tabpanel" aria-labelledby="pills-pizza-tab">
+                        <h2 class="group-cat-heading">Pizza Place</h2>
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingSeven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button"
+                                            data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true"
+                                            aria-controls="collapseSeven">
+                                            Category #7
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseSeven" class="collapse " aria-labelledby="headingSeven"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingEight">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseEight" aria-expanded="false"
+                                            aria-controls="collapseEight">
+                                            Category #8
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingNine">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseNine" aria-expanded="false"
+                                            aria-controls="collapseNine">
+                                            Category #9
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-curry" role="tabpanel" aria-labelledby="pills-curry-tab">
+                        <h2 class="group-cat-heading">Curry Cabin</h2>
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingTen">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button"
+                                            data-toggle="collapse" data-target="#collapseTen" aria-expanded="true"
+                                            aria-controls="collapseTen">
+                                            Category #7
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseTen" class="collapse " aria-labelledby="headingTen"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingEleven">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false"
+                                            aria-controls="collapseEleven">
+                                            Category #8
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwelve">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false"
+                                            aria-controls="collapseTwelve">
+                                            Category #9
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur
+                                                            adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="category-item d-flex">
+                                                    <div class="category-img bg-light"> <img
+                                                            src="https://via.placeholder.com/80" alt=""></div>
+                                                    <div class="item-content-section mx-3 mx-md-4">
+                                                        <h4>Midnight Delight</h4>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                            Provident nihil nesciunt magnam, eligendi vitae iusto
+                                                            exercitationem minus incidunt maxime.</p>
+                                                    </div>
+                                                    <div class="item-actions"> <button class="btn">Select</button>
+                                                        <p class="points text-uppercase">+50 pts</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
